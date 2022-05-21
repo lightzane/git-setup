@@ -8,7 +8,9 @@ This is just my personal setup for `GIT` https://git-scm.com/
 
 To list down global configuration, use the following command below:
 
-`git config --global -l`
+```
+git config --global -l
+```
 
 ```
 user.name=lightzane
@@ -30,11 +32,17 @@ git cloud "initial commit"
 
 ## Setup Git Global Configurations
 
-`git config --global alias.lg "log --pretty=format:'%C(auto) %h %d %s (%C(magenta)%an%C(auto)) %ar'"`
+```
+git config --global alias.lg "log --pretty=format:'%C(auto) %h %d %s (%C(magenta)%an%C(auto)) %ar'"
+```
 
-`git config --global alias.cloud "!f() { git add . && git commit -m \"$@\" && git push; }; f"`
+```
+git config --global alias.cloud "!f() { git add . && git commit -m \"$@\" && git push; }; f"
+```
 
-`git config --global alias.save "!f() { git add . && git commit -m \"$@\"; }; f"`
+```
+git config --global alias.save "!f() { git add . && git commit -m \"$@\"; }; f"
+```
 
 ## Pretty Formats
 
