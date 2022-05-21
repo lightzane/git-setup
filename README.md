@@ -79,16 +79,17 @@ git cloud "initial commit"
 
 ## Other Git commands
 
-| command                       | description                                                                                  |
-| ----------------------------- | -------------------------------------------------------------------------------------------- |
-| `git stash`                   | add uncommited changes to stash (good to save changes if not ready to commit)                |
-| `git stash -m "msg"`          | store uncommited changes with a description of the stash                                     |
-| `git stash pop`               | applies and delete the change in stash (applies the latest stash if more than 1 in the list) |
-| `git init`                    | initialize a common directory to a local git repository                                      |
-| `git init --bare <repo_name>` | creates a **bare** local `.git` repository (local cloud)                                     |
-| `gitk`                        | display git visual                                                                           |
-| `git reset --soft HEAD~n`     | resets back to `n`th previous commits and puts the changes to staged                         |
-| `git reset --soft <SHA>`      | resets back to the last commit after the specified `SHA` or branch name                      |
+| command                                  | description                                                                                  |
+| ---------------------------------------- | -------------------------------------------------------------------------------------------- |
+| `git stash`                              | add uncommited changes to stash (good to save changes if not ready to commit)                |
+| `git stash -m "msg"`                     | store uncommited changes with a description of the stash                                     |
+| `git stash pop`                          | applies and delete the change in stash (applies the latest stash if more than 1 in the list) |
+| `git init`                               | initialize a common directory to a local git repository                                      |
+| `git init --bare <repo_name>`            | creates a **bare** local `.git` repository (local cloud)                                     |
+| `gitk`                                   | display git visual                                                                           |
+| `git reset --soft HEAD~n`                | resets back to `n`th previous commits and puts the changes to staged                         |
+| `git reset --soft <SHA>`                 | resets back to the last commit after the specified `SHA` or branch name                      |
+| `git config --system init.defaultbranch` | default is `main` branch                                                                     |
 
 ## Advanced Git commands
 
