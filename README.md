@@ -1,6 +1,6 @@
 # git-setup
 
-![](https://img.shields.io/badge/git-git%20version%202.36.0.windows.1-red)
+![](https://img.shields.io/badge/git-version%202.36.0.windows.1-red)
 
 This is just my personal setup for `GIT` https://git-scm.com/
 
