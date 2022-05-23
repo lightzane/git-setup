@@ -17,8 +17,8 @@ user.name=lightzane
 user.email=lightzane@email.com
 credential.helper=ghp_A12BC3de456FGH0ijKLmNopQRsTuVW7xy8Z9
 core.editor=code --wait
-alias.lg=log --pretty=format:'%C(auto) %h %d %s (%C(magenta)%an%C(auto)) %ar'
-alias.lgg=log --graph --pretty=format:'%C(auto) %h %d %s (%C(magenta)%an%C(auto)) %ar'
+alias.lg=log --pretty=format:'%C(auto) %h (%C(magenta)%an%C(auto))%d %s %C(#636e72)(%ar)'
+alias.lgg=log --graph --pretty=format:'%C(auto) %h (%C(magenta)%an%C(auto))%d %s %C(#636e72)(%ar)'
 alias.cloud=!f() { git add . && git commit -m "$@" && git push; }; f
 alias.save=!f() { git add . && git commit -m "$@"; }; f
 ```
@@ -34,11 +34,11 @@ git cloud "initial commit"
 ## Setup Git Global Configurations
 
 ```
-git config --global alias.lg "log --pretty=format:'%C(auto) %h %d %s (%C(magenta)%an%C(auto)) %ar'"
+git config --global alias.lg "log --pretty=format:'%C(auto) %h (%C(magenta)%an%C(auto))%d %s %C(#636e72)(%ar)'"
 ```
 
 ```
-git config --global alias.lgg "log --graph --pretty=format:'%C(auto) %h %d %s (%C(magenta)%an%C(auto)) %ar'"
+git config --global alias.lgg "log --graph --pretty=format:'%C(auto) %h (%C(magenta)%an%C(auto))%d %s %C(#636e72)(%ar)'"
 ```
 
 ```
