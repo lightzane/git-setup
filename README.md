@@ -18,8 +18,8 @@ user.email=lightzane@sampleemail.com
 core.editor=code --wait
 alias.lg=log --pretty=format:'%C(auto) %h (%C(magenta)%an%C(auto))%d %s %C(#636e72)(%ar)'
 alias.lgg=log --graph --pretty=format:'%C(auto) %h (%C(magenta)%an%C(auto))%d %s %C(#636e72)(%ar)'
-alias.cloud=!f() { git add . && git commit -m "$@" && git push; }; f
-alias.save=!f() { git add . && git commit -m "$@"; }; f
+alias.cloud=!f() { git add -A && git commit -m "$@" && git push; }; f
+alias.save=!f() { git add -A && git commit -m "$@"; }; f
 ```
 
 > Can also use the following command: `git config --global -e` to view list and edit in Editor (`code.editor`)
@@ -41,11 +41,11 @@ git config --global alias.lgg "log --graph --pretty=format:'%C(auto) %h (%C(mage
 ```
 
 ```
-git config --global alias.cloud "!f() { git add . && git commit -m \"$@\" && git push; }; f"
+git config --global alias.cloud "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
 ```
 
 ```
-git config --global alias.save "!f() { git add . && git commit -m \"$@\"; }; f"
+git config --global alias.save "!f() { git add -A && git commit -m \"$@\"; }; f"
 ```
 
 > If author name (`%an`) is too long, you can truncate it using `%<(14,trunc)%an`
