@@ -48,6 +48,8 @@ git config --global alias.cloud "!f() { git add . && git commit -m \"$@\" && git
 git config --global alias.save "!f() { git add . && git commit -m \"$@\"; }; f"
 ```
 
+> If author name (`%an`) is too long, you can truncate it using `%<(14,trunc)%an`
+
 ## Pretty Formats
 
 `--pretty=format:'...'`
