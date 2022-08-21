@@ -22,6 +22,10 @@ alias.cloud=!f() { git add -A && git commit -m "$@" && git push; }; f
 alias.save=!f() { git add -A && git commit -m "$@"; }; f
 ```
 
+For _MacOS_, `core.editor=open -W -n`
+
+For _Windows_, `core.editor=notepad`
+
 > Can also use the following command: `git config --global -e` to view list and edit in Editor (`code.editor`)
 
 ## Usage
@@ -32,6 +36,8 @@ git cloud "initial commit"
 
 ## Setup Git Global Configurations
 
+**Windows/MacOS** git log
+
 ```
 git config --global alias.lg "log --pretty=format:'%C(auto) %h (%C(magenta)%an%C(auto))%d %s %C(#636e72)(%ar)'"
 ```
@@ -40,12 +46,24 @@ git config --global alias.lg "log --pretty=format:'%C(auto) %h (%C(magenta)%an%C
 git config --global alias.lgg "log --graph --pretty=format:'%C(auto) %h (%C(magenta)%an%C(auto))%d %s %C(#636e72)(%ar)'"
 ```
 
+**Windows** git add, commit and push
+
 ```
 git config --global alias.cloud "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
 ```
 
 ```
 git config --global alias.save "!f() { git add -A && git commit -m \"$@\"; }; f"
+```
+
+**MacOS** git add, commit and push
+
+```
+git config --global alias.cloud '!f() { git add -A && git commit -m "$@" && git push; }; f'
+```
+
+```
+git config --global alias.save '!f() { git add -A && git commit -m "$@"; }; f'
 ```
 
 > If author name (`%an`) is too long, you can truncate it using `%<(14,trunc)%an`
