@@ -124,6 +124,8 @@ git config --global alias.save '!f() { git add -A && git commit -m "$@"; }; f'
 | `git reset --soft HEAD~n`                | resets back to `n`th previous commits and puts the changes to staged                         |
 | `git reset --soft <SHA>`                 | resets back to the last commit after the specified `SHA` or branch name                      |
 | `git config --system init.defaultbranch` | default is `main` branch                                                                     |
+| `git push --all origin`                  | This will push tags and branches **(use with caution)**                                      |
+| `git push --all origin -u`               | Similar to above command, and additional tracking is setup for upstream                      |
 
 ## Advanced Git commands
 
