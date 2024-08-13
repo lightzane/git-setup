@@ -129,12 +129,14 @@ git config --global alias.save '!f() { git add -A && git commit -m "$@"; }; f'
 
 ## Advanced Git commands
 
-| command                                  | description                                                                      |
-| ---------------------------------------- | -------------------------------------------------------------------------------- |
-| `git tag -a <tag_name> -m "description"` | create new tag with description                                                  |
-| `git tag`                                | list all tags (`git log --oneline` also includes available tags on each commits) |
-| `git show <tag_name>`                    | display detailed information about the tag                                       |
-| `git push origin <tag_name>`             | pushes your local tag to remote servers                                          |
+| command                                  | description                                                                                      |
+| ---------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `git tag -a <tag_name> -m "description"` | create new tag with description                                                                  |
+| `git tag`                                | list all tags (`git log --oneline` also includes available tags on each commits)                 |
+| `git show <tag_name>`                    | display detailed information about the tag                                                       |
+| `git push origin <tag_name>`             | pushes your local tag to remote servers                                                          |
+| `git push --tags`                        | This will only push ALL tags and NOT branches                                                    |
+| `git ls-remote --tags origin`            | This command lists all the tags that exist in the remote repository (**`origin`** in this case). |
 
 **Careful using this**
 
