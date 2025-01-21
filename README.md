@@ -88,19 +88,20 @@ git config --global alias.save '!f() { git add -A && git commit -m "$@"; }; f'
 
 ## Git common usages
 
-| command                                  | description                                                                  |
-| ---------------------------------------- | ---------------------------------------------------------------------------- |
-| `git add .`                              | adds all untracked, modified, deleted files and folders to stage for commit  |
-| `git commit -m "msg"`                    | commits all files in the staged changes                                      |
-| `git push`                               | push commits to the cloud repository (remote/origin)                         |
-| `git fetch`                              | checks if there are new updates available from the cloud/bare repository     |
-| `git pull`                               | downloads the latest changes from the remote branch to local branch          |
-| `git pull --rebase`                      | (same as above) and additionally moving your commits on top of their commits |
-| `git pull origin <branch_name>`          | pull from a other branch                                                     |
-| `git pull origin <branch_name> --rebase` | (same as above) and additionally moving your commits on top of their commits |
-| `git checkout <branch_name>`             | switch to another branch                                                     |
-| `git checkout -b <branch_name>`          | create a new branch from the active branch                                   |
-| `git checkout --orphan <branch_name>`    | create new branch from active branch without git history                     |
+| command                                  | description                                                                           |
+| ---------------------------------------- | ------------------------------------------------------------------------------------- |
+| `git add .`                              | adds all untracked, modified, deleted files and folders to stage for commit           |
+| `git commit -m "msg"`                    | commits all files in the staged changes                                               |
+| `git push`                               | push commits to the cloud repository (remote/origin)                                  |
+| `git fetch`                              | checks if there are new updates available from the cloud/bare repository              |
+| `git fetch --prune`                      | additionally removes stale references to deleted remote branches (cleanup your local) |
+| `git pull`                               | downloads the latest changes from the remote branch to local branch                   |
+| `git pull --rebase`                      | (same as above) and additionally moving your commits on top of their commits          |
+| `git pull origin <branch_name>`          | pull from a other branch                                                              |
+| `git pull origin <branch_name> --rebase` | (same as above) and additionally moving your commits on top of their commits          |
+| `git checkout <branch_name>`             | switch to another branch                                                              |
+| `git checkout -b <branch_name>`          | create a new branch from the active branch                                            |
+| `git checkout --orphan <branch_name>`    | create new branch from active branch without git history                              |
 
 ## Git local repository management
 
