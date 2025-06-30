@@ -49,24 +49,51 @@ git config --global alias.lgg "log --graph --pretty=format:'%C(auto) %h (%C(mage
 **Windows** git add, commit and push
 
 ```
-git config --global alias.cloud "!f() { git add -A && git commit -m \"$@\" && git push; }; f"
+git config --global alias.cloud "!f() { if [ $# -eq 0 ]; then git add -A && git commit && git push; else git add -A && git commit -m \"$*\" && git push; fi; }; f"
 ```
 
 ```
-git config --global alias.save "!f() { git add -A && git commit -m \"$@\"; }; f"
+git config --global alias.save "!f() { if [ $# -eq 0 ]; then git add -A && git commit; else git add -A && git commit -m \"$*\"; fi; }; f"
 ```
 
 **MacOS** git add, commit and push
 
 ```
-git config --global alias.cloud '!f() { git add -A && git commit -m "$@" && git push; }; f'
+git config --global alias.cloud '!f() { if [ $# -eq 0 ]; then git add -A && git commit && git push; else git add -A && git commit -m "$*" && git push; fi; }; f'
 ```
 
 ```
-git config --global alias.save '!f() { git add -A && git commit -m "$@"; }; f'
+git config --global alias.save '!f() { if [ $# -eq 0 ]; then git add -A && git commit; else git add -A && git commit -m "$*"; fi; }; f'
 ```
 
 > If author name (`%an`) is too long, you can truncate it using `%<(14,trunc)%an`
+
+### Notes about the arguments
+
+- `$@` - use only when expecting and/or appending multiple arguments (i.e. `git lg -5`)
+- `$*` - use only when expecting a **single** argument. (i.e. `git save this is my message`)
+
+#### Examples
+
+##### When using `$@`
+
+Alias: `git commit -m "$@"`
+
+Input: `git commit -m this is my message`
+
+Result: `git commit -m "this" "is" "my" "message"`
+
+> Mitigation: `git commit -m "this is my message"` is to wrap the message with quotes.
+
+##### When using `$*`
+
+Alias: `git commit -m "$*"`
+
+Input: `git commit -m this is my message`
+
+Result: `git commit -m "this is my message"`
+
+> This will make the wrapping of quotes optional since all the arguments will be treated as one string.
 
 ## Pretty Formats
 
