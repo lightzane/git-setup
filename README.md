@@ -77,9 +77,9 @@ git config --global alias.save '!f() { if [ $# -eq 0 ]; then git add -A && git c
 
 ##### When using `$@`
 
-Alias: `git commit -m "$@"`
+alias.save: `git commit -m "$@"`
 
-Input: `git commit -m this is my message`
+Input: `git save this is my message`
 
 Result: `git commit -m "this" "is" "my" "message"`
 
@@ -87,9 +87,9 @@ Result: `git commit -m "this" "is" "my" "message"`
 
 ##### When using `$*`
 
-Alias: `git commit -m "$*"`
+alias.save: `git commit -m "$*"`
 
-Input: `git commit -m this is my message`
+Input: `git save this is my message`
 
 Result: `git commit -m "this is my message"`
 
