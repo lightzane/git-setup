@@ -174,3 +174,7 @@ Result: `git commit -m "this is my message"`
 | `git rebase -i <SHA or branch_name>` | pick commits after the specified `SHA` or branch name |
 
 > You might need to change git config `core.editor=code --wait` or other editor to make editing much easier
+
+## Other Guides
+
+- [Git-ignore a previously committed file](./gitignore-prev-committed-file.md)
